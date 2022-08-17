@@ -4,6 +4,9 @@ import br.com.dh.meli.projeto_integrador.dto.JSONOutuputMessageDTO;
 import br.com.dh.meli.projeto_integrador.exception.PreconditionFailedException;
 import br.com.dh.meli.projeto_integrador.service.geolocalization.ICountryService;
 import br.com.dh.meli.projeto_integrador.service.geolocalization.IStateService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +22,7 @@ import javax.validation.Valid;
  */
 @RestController
 @RequestMapping("/api/v1/geo")
+@ApiOperation(value = "Operações com GeoLocalização")
 public class GeoLocalizationController {
 
     @Autowired
