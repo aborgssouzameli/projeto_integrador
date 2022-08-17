@@ -4,6 +4,9 @@ import br.com.dh.meli.projeto_integrador.dto.JSONOutuputMessageDTO;
 import br.com.dh.meli.projeto_integrador.exception.PreconditionFailedException;
 import br.com.dh.meli.projeto_integrador.service.geolocalization.ICountryService;
 import br.com.dh.meli.projeto_integrador.service.geolocalization.IStateService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +22,7 @@ import javax.validation.Valid;
  */
 @RestController
 @RequestMapping("/api/v1/geo")
+@ApiOperation(value = "Operações com GeoLocalização")
 public class GeoLocalizationController {
 
     @Autowired
@@ -34,6 +38,9 @@ public class GeoLocalizationController {
      * @return ResponseEntity<JSONOutuputMessageDTO>
      * @author Alexandre Borges Souza
      */
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Retorna a lista de pessoa")
+    })
     @PostMapping("/country")
     public ResponseEntity<JSONOutuputMessageDTO> addCountry(@RequestBody @Valid AddCountryDTO newCountry) {
         Boolean result = countryService.add(newCountry);
