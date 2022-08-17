@@ -160,7 +160,7 @@ public class GeoLocalizationController {
         JSONOutuputMessageDTO outuputMessageDTO = JSONOutuputMessageDTO
                 .builder()
                 .title("Sucesso")
-                .message("Estado atualizado com sucesso")
+                .message("Estado excluído com sucesso")
                 .status(HttpStatus.OK)
                 .build();
         return ResponseEntity.status(HttpStatus.OK).body(outuputMessageDTO);
