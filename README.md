@@ -10,7 +10,7 @@
 * Exemplos de Uso [`src/main/resources/collection/Projeto_Integrador.postman_collection.json`](src/main/resources/collection/Projeto_Integrador.postman_collection.json)
 * Diagrama de Entidade e Relacionamento [`src/main/resources/ProjetoIntegradorDatabase.pdf`](src/main/resources/ProjetoIntegradorDatabase.pdf)
 * Requisito 6 [`src/main/resources/Requisito6_Bootcamp_DH.docx.pdf`](src/main/resources/Requisito6_Bootcamp_DH.docx.pdf)
-
+* Documentação Swagger (http://localhost:8080/swagger-ui.html)
 ## 📝 Proposta
 Criar uma API REST que faz o gerenciamento de estoque e venda de produtos frescos.
 
