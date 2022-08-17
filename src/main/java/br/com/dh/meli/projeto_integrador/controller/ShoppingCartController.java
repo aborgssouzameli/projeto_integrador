@@ -27,7 +27,7 @@ public class ShoppingCartController {
 
 
     @PostMapping("/shopping-cart")
-    public ResponseEntity<ShoppingCartDTO> createShoppingCart(@RequestBody ShoppingCartDTO shoppingCartDto){
+    public ResponseEntity<ShoppingCartDTO> createShoppingCart(@RequestBody @Valid ShoppingCartDTO shoppingCartDto){
         return  ResponseEntity.status(HttpStatus.CREATED).body(service.convertToDTO(service.createShoppingCart(shoppingCartDto)));
     }
 
